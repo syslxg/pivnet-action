@@ -1,0 +1,29 @@
+name: 'PivNet Action'
+description: 'Upload tile to PivNet'
+inputs:
+  api_token:
+    required: true
+  product_slug:
+    required: true
+  endpoint:
+    required: true
+  file_glob:
+    required: true
+  metadata_file:
+    required: true
+  override:
+    required: true
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.api_token }}
+    - ${{ inputs.product_slug }}
+    - ${{ inputs.endpoint }}
+    - ${{ inputs.file_glob }}
+    - ${{ inputs.metadata_file }}
+    - ${{ inputs.override }}
+
+    
