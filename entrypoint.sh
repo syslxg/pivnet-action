@@ -1,3 +1,5 @@
+#!/bin/bash
+
 api_token=$1
 product_slug=$2
 endpoint=$3
